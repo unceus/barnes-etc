@@ -1,0 +1,11 @@
+[Unit]
+Description=User resume actions
+After=suspend.target
+
+[Service]
+User=%I
+Type=simple
+ExecStart=/usr/bin/sudo netctl start wlp58s0-hufflepupstairs
+
+[Install]
+WantedBy=suspend.target
